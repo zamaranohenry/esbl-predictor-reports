@@ -1,0 +1,10 @@
+=== COLUMN ANALYSIS: Difficulty in breathing ===
+Total rows  : 1,569
+Missing     : 0 (0.0%)
+Dtype       : str
+Unique vals : 2
+Clinical    : Feature column: Difficulty in breathing
+
+--- Key Findings ---
+  • Overall prevalence (Yes): 100 / 1569 (6.4%)
+  • Missing: 0 (0.0%)

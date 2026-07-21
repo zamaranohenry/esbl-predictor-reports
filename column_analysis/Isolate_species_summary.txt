@@ -1,0 +1,11 @@
+=== COLUMN ANALYSIS: Isolate species ===
+Total rows  : 1,569
+Missing     : 0 (0.0%)
+Dtype       : str
+Unique vals : 10
+Clinical    : The bacterial species isolated from the clinical specimen.
+
+--- Key Findings ---
+  • Unique categories: 10
+  • Most common: 'No organism identified' (909 times, 57.9%)
+  • Missing: 0 (0.0%)

@@ -1,0 +1,11 @@
+=== COLUMN ANALYSIS: Type of cancer ===
+Total rows  : 1,569
+Missing     : 0 (0.0%)
+Dtype       : str
+Unique vals : 27
+Clinical    : Primary cancer diagnosis.
+
+--- Key Findings ---
+  • Unique categories: 27
+  • Most common: 'Cervical cancer' (204 times, 13.0%)
+  • Missing: 0 (0.0%)

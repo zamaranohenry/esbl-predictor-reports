@@ -1,0 +1,10 @@
+=== COLUMN ANALYSIS: Hypertension ===
+Total rows  : 1,569
+Missing     : 2 (0.13%)
+Dtype       : str
+Unique vals : 2
+Clinical    : Feature column: Hypertension
+
+--- Key Findings ---
+  • Overall prevalence (Yes): 215 / 1567 (13.7%)
+  • Missing: 2 (0.13%)

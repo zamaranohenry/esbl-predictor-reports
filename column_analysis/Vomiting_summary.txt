@@ -1,0 +1,10 @@
+=== COLUMN ANALYSIS: Vomiting ===
+Total rows  : 1,569
+Missing     : 0 (0.0%)
+Dtype       : str
+Unique vals : 2
+Clinical    : Feature column: Vomiting
+
+--- Key Findings ---
+  • Overall prevalence (Yes): 479 / 1569 (30.5%)
+  • Missing: 0 (0.0%)

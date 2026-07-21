@@ -1,0 +1,11 @@
+=== COLUMN ANALYSIS: Stage of cancer ===
+Total rows  : 1,569
+Missing     : 0 (0.0%)
+Dtype       : str
+Unique vals : 4
+Clinical    : Clinical cancer stage at enrolment (I–IV).
+
+--- Key Findings ---
+  • Unique categories: 4
+  • Most common: 'IV' (987 times, 62.9%)
+  • Missing: 0 (0.0%)

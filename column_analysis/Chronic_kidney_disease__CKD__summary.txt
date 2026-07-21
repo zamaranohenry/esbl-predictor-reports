@@ -1,0 +1,10 @@
+=== COLUMN ANALYSIS: Chronic kidney disease (CKD) ===
+Total rows  : 1,569
+Missing     : 0 (0.0%)
+Dtype       : str
+Unique vals : 2
+Clinical    : Feature column: Chronic kidney disease (CKD)
+
+--- Key Findings ---
+  • Overall prevalence (Yes): 40 / 1569 (2.5%)
+  • Missing: 0 (0.0%)

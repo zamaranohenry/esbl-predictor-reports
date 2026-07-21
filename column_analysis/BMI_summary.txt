@@ -1,0 +1,25 @@
+=== COLUMN ANALYSIS: BMI ===
+Total rows  : 1,569
+Missing     : 0 (0.0%)
+Dtype       : float64
+Unique vals : 165
+Clinical    : Body Mass Index (kg/m²) — derived from weight and height.
+
+--- Key Findings ---
+  • Range: 8.9 – 258.7
+  • Mean ± SD: 21.1 ± 7.4
+  • Median (IQR): 22.0 (19.2–23.7)
+  • Missing: 0 (0.0%)
+
+--- Data Quality Issues ---
+  ⚠ 100 outlier(s) detected outside IQR bounds [12.4, 30.4]. Min=8.9, Max=258.7.
+
+--- Descriptive Stats ---
+  count     : 1569.0
+  mean      : 21.055
+  std       : 7.362
+  min       : 8.9
+  25%       : 19.2
+  50%       : 22.0
+  75%       : 23.7
+  max       : 258.7

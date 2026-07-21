@@ -1,0 +1,10 @@
+=== COLUMN ANALYSIS: Diabetes ===
+Total rows  : 1,569
+Missing     : 1 (0.06%)
+Dtype       : str
+Unique vals : 2
+Clinical    : Feature column: Diabetes
+
+--- Key Findings ---
+  • Overall prevalence (Yes): 98 / 1568 (6.2%)
+  • Missing: 1 (0.06%)

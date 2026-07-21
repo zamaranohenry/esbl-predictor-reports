@@ -1,0 +1,10 @@
+=== COLUMN ANALYSIS: malaise ===
+Total rows  : 1,569
+Missing     : 0 (0.0%)
+Dtype       : str
+Unique vals : 2
+Clinical    : Feature column: malaise
+
+--- Key Findings ---
+  • Overall prevalence (Yes): 91 / 1569 (5.8%)
+  • Missing: 0 (0.0%)

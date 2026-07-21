@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESBL-PE Predictor — Reports</title>
+  <style>
+    body{font-family:Georgia,serif;background:#f5f7fa;color:#222;margin:0}
+    header{background:#2c3e50;color:white;padding:28px 40px}
+    header h1{font-size:1.6em;margin-bottom:6px}
+    header p{font-size:.95em;opacity:.85}
+    .container{max-width:1100px;margin:0 auto;padding:32px 24px}
+    .section{margin-bottom:40px}
+    .section h2{color:#2c3e50;font-size:1.2em;border-bottom:2px solid #2c3e50;padding-bottom:8px;margin-bottom:16px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+    .card{background:white;border-radius:8px;border:1px solid #ddd;padding:18px 20px;text-decoration:none;color:inherit;display:block;transition:box-shadow .2s,border-color .2s}
+    .card:hover{box-shadow:0 4px 12px rgba(0,0,0,.12);border-color:#2c3e50}
+    .label{font-size:.72em;font-weight:bold;text-transform:uppercase;color:#888;margin-bottom:6px}
+    .title{font-size:1em;font-weight:bold;color:#2c3e50}
+    .desc{font-size:.85em;color:#666;margin-top:4px}
+    .badge{display:inline-block;font-size:.72em;padding:2px 8px;border-radius:20px;margin-top:8px;font-weight:bold}
+    .eda{background:#e3f2fd;color:#1565c0}
+    .col{background:#e8f5e9;color:#2e7d32}
+    .risk{background:#fff3e0;color:#e65100}
+    .meta{background:white;border-radius:8px;border:1px solid #ddd;padding:16px 20px;margin-bottom:32px;font-size:.9em;display:flex;gap:24px;flex-wrap:wrap}
+    footer{text-align:center;padding:24px;font-size:.8em;color:#999;border-top:1px solid #ddd;margin-top:40px}
+  </style>
+</head>
+<body>
+<header>
+  <h1>ESBL-PE Predictor — Analysis Reports</h1>
+  <p>Mbarara Regional Referral Hospital &nbsp;|&nbsp; Kabale University &nbsp;|&nbsp; Phillip Ssempeebwa</p>
+</header>
+<div class="container">
+  <div class="meta">
+    <div><strong>Dataset:</strong> 1,569 patients × 81 columns</div>
+    <div><strong>Labelled:</strong> 660 patients (281 ESBL+, 379 ESBL−)</div>
+    <div><strong>Target:</strong> ESBL Production (Both Enterobacterales)</div>
+  </div>
+  <div class="section">
+    <h2>📊 EDA Overview</h2>
+    <div class="grid">
+      <a class="card" href="eda_report_2026-07-21_06-07-40.html">
+        <div class="label">Full EDA</div><div class="title">Complete EDA Report</div>
+        <div class="desc">Class distribution, demographics, cancer, symptoms, comorbidities, antibiogram, BMI, correlation</div>
+        <span class="badge eda">EDA</span>
+      </a>
+      <a class="card" href="column_analysis/00_EDA_MASTER_SUMMARY.md">
+        <div class="label">Summary</div><div class="title">EDA Master Summary</div>
+        <div class="desc">Key findings, data quality issues, preprocessing decisions, feature rankings</div>
+        <span class="badge eda">EDA</span>
+      </a>
+    </div>
+  </div>
+  <div class="section">
+    <h2>🧍 Demographics &amp; Anthropometrics</h2>
+    <div class="grid">
+      <a class="card" href="column_analysis/Age_analysis.html"><div class="label">Demographics</div><div class="title">Age</div><div class="desc">Range 1–88 years. Paediatric patients included. No missing.</div><span class="badge col">Column</span></a>
+      <a class="card" href="column_analysis/Weight_analysis.html"><div class="label">Anthropometrics</div><div class="title">Weight</div><div class="desc">1 error: Study ID 1391 (731kg → 73.1kg). Children correctly low.</div><span class="badge col">Column</span></a>
+      <a class="card" href="column_analysis/Height_analysis.html"><div class="label">Anthropometrics</div><div class="title">Height</div><div class="desc">Low values (70–90cm) are real paediatric measurements (age 1–3).</div><span class="badge col">Column</span></a>
+      <a class="card" href="column_analysis/BMI_analysis.html"><div class="label">Anthropometrics</div><div class="title">BMI</div><div class="desc">1 outlier (258.7 = data error). Median 22.0 normal. Children BMI expected low.</div><span class="badge col">Column</span></a>
+    </div>
+  </div>
+  <div class="section">
+    <h2>🔬 Microbiology (Post-Culture)</h2>
+    <div class="grid">
+      <a class="card" href="column_analysis/Isolate_species_analysis.html"><div class="label">Microbiology</div><div class="title">Isolate Species</div><div class="desc">K. aerogenes &amp; P. vulgaris: 100% ESBL+. E. coli most common. Salmonella: 0% ESBL+.</div><span class="badge col">Column</span></a>
+      <a class="card" href="column_analysis/Specimen_analysis.html"><div class="label">Microbiology</div><div class="title">Specimen Type</div><div class="desc">Sputum 50.6% ESBL+. Blood 34.5%. 7 specimen types.</div><span class="badge col">Column</span></a>
+    </div>
+  </div>
+  <div class="section">
+    <h2>🎗️ Cancer Type &amp; Stage</h2>
+    <div class="grid">
+      <a class="card" href="column_analysis/Type_of_cancer_analysis.html"><div class="label">Oncology</div><div class="title">Cancer Type</div><div class="desc">GIST: 85.7% ESBL+. Pancreatic: 75%. Cervical most common (204, 36%).</div><span class="badge risk">Key Predictor</span></a>
+      <a class="card" href="column_analysis/Stage_of_cancer_analysis.html"><div class="label">Oncology</div><div class="title">Cancer Stage</div><div class="desc">62.9% Stage IV. Stage IV: 45.7% ESBL+.</div><span class="badge risk">Key Predictor</span></a>
+    </div>
+  </div>
+  <div class="section">
+    <h2>🏥 Comorbidities</h2>
+    <div class="grid">
+      <a class="card" href="column_analysis/Liver_disease_analysis.html"><div class="label">Comorbidity</div><div class="title">Liver Disease</div><div class="desc">83.3% ESBL+ vs 42.2% (Diff +41.1%). N=12.</div><span class="badge risk">Strong Signal</span></a>
+      <a class="card" href="column_analysis/Anemia_analysis.html"><div class="label">Comorbidity</div><div class="title">Anemia</div><div class="desc">63.8% ESBL+ vs 40.5% (Diff +23.3%). N=92.</div><span class="badge risk">Strong Signal</span></a>
+      <a class="card" href="column_analysis/Chronic_kidney_disease__CKD__analysis.html"><div class="label">Comorbidity</div><div class="title">Chronic Kidney Disease</div><div class="desc">62.5% ESBL+ vs 41.8% (Diff +20.7%). N=40.</div><span class="badge risk">Strong Signal</span></a>
+      <a class="card" href="column_analysis/Diabetes_analysis.html"><div class="label">Comorbidity</div><div class="title">Diabetes</div><div class="desc">56.9% ESBL+ vs 41.1% (Diff +15.8%). Prevalence 6.2%.</div><span class="badge col">Column</span></a>
+      <a class="card" href="column_analysis/Hypertension_analysis.html"><div class="label">Comorbidity</div><div class="title">Hypertension</div><div class="desc">No signal (41.3% vs 42.9%). Most common comorbidity (13.7%).</div><span class="badge col">Column</span></a>
+    </div>
+  </div>
+  <div class="section">
+    <h2>🤒 Symptoms</h2>
+    <div class="grid">
+      <a class="card" href="column_analysis/Difficulty_in_breathing_analysis.html"><div class="label">Symptom</div><div class="title">Difficulty in Breathing</div><div class="desc">85.9% ESBL+ if present (Diff +49.7%). Prevalence 6.4%.</div><span class="badge risk">Key Predictor</span></a>
+      <a class="card" href="column_analysis/Cough_analysis.html"><div class="label">Symptom</div><div class="title">Cough</div><div class="desc">82.0% ESBL+ if present (Diff +45.4%). Prevalence 7.1%.</div><span class="badge risk">Key Predictor</span></a>
+      <a class="card" href="column_analysis/malaise_analysis.html"><div class="label">Symptom</div><div class="title">Malaise</div><div class="desc">73.4% ESBL+ if present (Diff +34.1%). Prevalence 5.8%.</div><span class="badge risk">Key Predictor</span></a>
+      <a class="card" href="column_analysis/Fever_analysis.html"><div class="label">Symptom</div><div class="title">Fever</div><div class="desc">No signal (41.9% vs 43.5%). Very common: 57.9% prevalence.</div><span class="badge col">Column</span></a>
+      <a class="card" href="column_analysis/Feeling_tired__fatigue_analysis.html"><div class="label">Symptom</div><div class="title">Fatigue</div><div class="desc">Weak signal (+4.3%). Most prevalent symptom (69.9%).</div><span class="badge col">Column</span></a>
+      <a class="card" href="column_analysis/Vomiting_analysis.html"><div class="label">Symptom</div><div class="title">Vomiting</div><div class="desc">Slightly negative signal (−4.8%). Non-specific (30.5%).</div><span class="badge col">Column</span></a>
+    </div>
+  </div>
+</div>
+<footer>ESBL-PE Predictor &mdash; Kabale University / MRRH &mdash; <a href="https://github.com/PhillDev-coder256/esbl-predictor" style="color:#999;">GitHub (Private)</a></footer>
+</body>
+</html>

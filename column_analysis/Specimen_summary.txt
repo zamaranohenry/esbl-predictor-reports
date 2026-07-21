@@ -1,0 +1,11 @@
+=== COLUMN ANALYSIS: Specimen ===
+Total rows  : 1,569
+Missing     : 0 (0.0%)
+Dtype       : str
+Unique vals : 7
+Clinical    : Type of clinical specimen from which the isolate was obtained.
+
+--- Key Findings ---
+  • Unique categories: 7
+  • Most common: 'Urine' (340 times, 21.7%)
+  • Missing: 0 (0.0%)

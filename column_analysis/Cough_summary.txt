@@ -1,0 +1,10 @@
+=== COLUMN ANALYSIS: Cough ===
+Total rows  : 1,569
+Missing     : 2 (0.13%)
+Dtype       : str
+Unique vals : 2
+Clinical    : Feature column: Cough
+
+--- Key Findings ---
+  • Overall prevalence (Yes): 111 / 1567 (7.1%)
+  • Missing: 2 (0.13%)
